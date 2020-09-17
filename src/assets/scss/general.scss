@@ -1,0 +1,61 @@
+body {
+    font-family: $font-family-base;
+    background-color: $white;
+    color: $black;
+}
+
+.logo {
+    font-family: $font-family;
+    font-size: 3rem;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+section {
+    padding: 10rem 0;
+}
+
+.navbar {
+    @extend .position-absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+
+    a {
+        color: $black;
+
+        &:hover {
+            color: $white;
+        }
+    }
+    .navbar-collapse {
+        @extend .justify-content-end;
+    }
+    .navbar-nav {
+        text-transform: uppercase;
+    }
+}
+
+.intro {
+    background-color: $pastel-yellow;
+    padding: 10rem 0;
+    text-align: center;
+
+    .thumb-image img {
+        border-radius: 10rem;
+        border: 5px solid #fff;
+    }
+
+    h1 {
+        font-family: $font-family;
+        margin: 10px 0;
+    }
+    
+    p {
+        font-size: 30px;
+        margin: 0;
+    }
+}

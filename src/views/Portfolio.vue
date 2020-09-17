@@ -1,5 +1,11 @@
 <template>
     <div>
-        <h1>nav</h1>
+        <h1>portfolioinfo</h1>
     </div>
 </template>
+
+<script>
+export default {
+  name: 'portfolio'
+}
+</script>
