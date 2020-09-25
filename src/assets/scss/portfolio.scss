@@ -1,0 +1,161 @@
+
+#portfolioBlocks {
+    h1{
+        font-family: $font-family;
+        margin-bottom: 3rem;
+        color: $dark-brown;
+    }
+
+    .project {
+        cursor: pointer;
+        margin-bottom: 3rem;
+
+        .project-title {
+            padding: 1.5rem 0;
+            font-size: 1.3rem;
+            position: relative;
+
+            &::after {
+                content: "\27F6";
+                opacity: 0;
+                right: 0;
+                padding-left: 1rem;
+                font-size: 1.2rem;
+            }
+
+            &:hover:after {
+                opacity: 1;
+            }
+        }
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                -webkit-transition: .5s ease;
+                -moz-transition: .5s ease;
+                transition: .5s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+            }
+
+            &::before {
+                content: url("../images/eye.png");
+                text-align: center;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                background: rgba(0,0,0,0.5);
+                z-index: 2;
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                -moz-transition: 0.5s ease;
+                -webkit-transition: 0.5s ease;
+                transition: 0.5s ease;
+            }
+
+            &:hover:before {
+                opacity: 1;
+            }
+        }
+        
+    }
+}
+.project-details {
+    padding: 5rem 0;
+
+    .close-outer {
+        position: fixed;
+        width: 70px;
+        cursor: pointer;
+        top: 2rem;
+        right: 2rem;
+    
+        .close-inner {
+          width: inherit;
+          text-align: center;
+    
+          label { 
+            font-size: .8em; 
+            line-height: 4em;
+            text-transform: uppercase;
+            color:$black;
+            transition: all .3s ease-in;
+            opacity: 0;
+            cursor: pointer;
+            margin: 0;
+          }
+    
+          &::before, &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: inherit;
+            background: $dark-brown;
+            left: 0;
+            transition: all .3s ease-in;
+          }
+    
+          &::before {
+            top: 50%; 
+            transform: rotate(45deg);  
+          }
+    
+          &::after {  
+            bottom: 50%;
+            transform: rotate(-45deg);  
+          }
+        }
+    
+        &:hover label {
+            opacity: 1;
+        }
+    }
+    .close-outer:hover .close-inner:before,
+    .close-outer:hover .close-inner:after {
+      transform: rotate(0);
+    }
+    
+    .close-outer:hover .close-inner:before {
+      top: 0;
+    }
+    
+    .close-outer:hover .close-inner:after {
+      bottom: 0;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: $font-family;
+        color: $dark-brown;
+    }
+
+    .main-img {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .description {
+        margin: 0 auto 5rem;
+
+        h3 {
+            font-family: $font-family;
+            color: $dark-brown;
+        }
+    }
+}

@@ -1,18 +1,15 @@
 <template>
-  <Navigation />
-  <Home />
-
+  <Navigation v-if="!$route.meta.hideNavigation" />
+  <router-view></router-view>
 </template>
 
 <script>
-import Home from './views/Home'
-import Navigation from './components/Navigation'
+import Navigation from '@/components/Navigation'
 
 export default {
   name: 'app',
   components: {
-    Navigation,
-    Home
+    Navigation
   }
 }
 </script>

@@ -1,0 +1,61 @@
+@include media-breakpoint-down(sm) {
+    .navbar {
+        background-color: $white;
+        padding: 0 1rem;
+
+        .nav-item {
+            a, a:active, a:active, a:visited{
+                color: $black;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    section, .project-details {
+        padding: 3rem 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .intro {
+        padding: 6rem 1rem 3rem;
+
+        p {
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+
+    #portfolioBlocks h1 {
+        margin-bottom: 2rem;
+    }
+
+    .project-details {
+
+        .description {
+            margin: 0 auto 3rem;
+        }
+
+        .close-outer {
+            width: 30px;
+            top: 0rem;
+            right: 1rem;
+        }
+    }
+
+    .about {
+        padding-top: 5rem;
+
+        .about-img {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+        }
+    }
+
+  }

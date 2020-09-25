@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 import 'bootstrap'
-import './assets/scss/index.scss'
+import './assets/scss/app.scss'
 import './assets/js/script.js'
 
 createApp(App)

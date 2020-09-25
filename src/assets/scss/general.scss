@@ -2,11 +2,26 @@ body {
     font-family: $font-family-base;
     background-color: $white;
     color: $black;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a, a:hover {
+    color: $black;
 }
 
 .logo {
     font-family: $font-family;
     font-size: 3rem;
+    color: $dark-brown;
+
+    &:active, &:visited {
+        color:$dark-brown;
+    }
 
     &:hover {
         text-decoration: none;
@@ -15,27 +30,89 @@ body {
 
 section {
     padding: 10rem 0;
+
+    h1 {
+        font-family: $font-family;
+        color: $dark-brown;
+    }
+}
+
+button:focus {
+    outline: none;
 }
 
 .navbar {
-    @extend .position-absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
+    width: 100%;
 
-    a {
-        color: $black;
-
-        &:hover {
-            color: $white;
-        }
+    &.toggleBg {
+        background-color: $white;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        -o-transition: all .25s ease-out;
+        transition: all .25s ease-out;
     }
+    
+    .collapsing {
+        transition: 0.1s ease;
+    }
+    
     .navbar-collapse {
         @extend .justify-content-end;
     }
     .navbar-nav {
         text-transform: uppercase;
+    }
+
+    .icon-bar {
+        width: 22px; 
+        height: 2px;
+        background-color: $black;
+        display: block;
+        transition: all 0.2s;
+        margin-top: 4px
+    }
+    
+    .navbar-toggler {
+      border: none;
+      background: transparent !important;
+      padding: 0;
+
+        .top-bar {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          transform-origin: 10% 10%;
+          -webkit-transform-origin: 10% 10%;
+          -moz-transform-origin: 10% 10%;
+        }
+        .middle-bar {
+          opacity: 0;
+        }
+
+        .bottom-bar {
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          transform-origin: 10% 90%;
+          -webkit-transform-origin: 10% 90%;
+          -moz-transform-origin: 10% 90%;
+        }
+        
+        &.collapsed .top-bar {
+          transform: rotate(0);
+          -moz-transform: rotate(0);
+          -webkit-transform: rotate(0);
+        }
+        
+        &.collapsed .middle-bar {
+          opacity: 1;
+        }
+        
+        &.collapsed .bottom-bar {
+          transform: rotate(0);
+          -webkit-transform: rotate(0);
+          -moz-transform: rotate(0);
+        }
     }
 }
 
@@ -50,12 +127,52 @@ section {
     }
 
     h1 {
-        font-family: $font-family;
         margin: 10px 0;
+        font-family: $font-family;
+        font-size: 2rem;
     }
     
     p {
         font-size: 30px;
-        margin: 0;
+        margin: 0 auto 1rem;
+        width: 50%;
     }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+#contact {
+    background-color: $pastel-green;
+    text-align: center;
+    padding: 5rem 0 0;
+
+    .social {
+        margin: 2rem 0;
+
+        div {
+            display: inline-block;
+            margin: 0 .5rem;
+
+            img {
+                vertical-align: auto;
+            }
+        } 
+    }
+
+    .copyright {
+        opacity: .4;
+        font-size: .9rem;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+}
+
+.about .row {
+    align-items: center;
 }

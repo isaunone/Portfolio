@@ -1,12 +1,8 @@
 <template>
   <div id="home">
     <Intro />
-    <section id="portfolioBlocks">
-      <PortfolioBlocks />
-    </section>
-    <section id="contact">
-      <Contact />
-    </section>
+    <PortfolioBlocks />
+    <Contact />
   </div>
 </template>
 

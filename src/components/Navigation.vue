@@ -1,24 +1,48 @@
 <template>
-    <nav class="container navbar navbar-expand-lg">
-        <a class="logo" href="#">V.</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <router-link class="nav-link" to="/home" >Home</router-link>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll" href="#portfolioBlocks">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <nav :class="{toggleBg : isActive}"
+    class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <router-link to="/" class="logo" href="#">V.</router-link>
+            <button @click="toggleBackground"
+            class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a :href="$router.resolve({name: 'home'}).href" class="nav-link" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a :href="$router.resolve({name: 'about'}).href" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link scroll" to="/" href="#portfolioBlocks" >Portfolio</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#contact" >Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    toggleBackground: function () {
+      this.isActive = !this.isActive
+    }
+  }
+}
+</script>

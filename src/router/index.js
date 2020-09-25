@@ -6,21 +6,19 @@ import Portfolio from '../views/Portfolio.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
-    meta: {
-      reload: true
-    }
+    name: 'home',
+    component: Home
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     component: About
   },
   {
-    path: '/portfolio',
-    name: 'Portfolio',
-    component: Portfolio
+    path: '/portfolio/:Pid',
+    name: 'portfolio',
+    component: Portfolio,
+    meta: { hideNavigation: true }
   }
 ]
 
