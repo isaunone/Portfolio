@@ -1,5 +1,5 @@
 <template>
-    <nav :class="{toggleBg : isActive}"
+    <nav :class="{navwhite : isActive}"
     class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <router-link to="/" class="logo" href="#">V.</router-link>
@@ -21,7 +21,7 @@
                         <router-link class="nav-link scroll" to="/" href="#portfolioBlocks" >Portfolio</router-link>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Resume</a>
+                        <a href="http://valerievarias.com/" target="_blank" class="nav-link">Resume</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#contact" >Contact</a>

@@ -44,6 +44,10 @@ button:focus {
 .navbar {
     width: 100%;
 
+    &.navwhite {
+        background-color: $white;
+    }
+
     &.toggleBg {
         background-color: $white;
         -webkit-transition: all .25s ease-out;
@@ -121,7 +125,7 @@ button:focus {
     padding: 10rem 0;
     text-align: center;
 
-    .thumb-image img {
+    .thumb-image {
         border-radius: 10rem;
         border: 5px solid #fff;
     }
@@ -173,6 +177,11 @@ button:focus {
     }
 }
 
-.about .row {
-    align-items: center;
+.about {
+    .about-img {
+        text-align: center;
+    }
+    .row {
+        align-items: center;
+    }
 }

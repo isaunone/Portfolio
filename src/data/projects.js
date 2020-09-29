@@ -40,8 +40,33 @@ export default [
     screen: require('../assets/images/project-3/screen.png')
   },
   {
-    title: 'Optimel landing page',
-    alt: 'optimel-landing-page',
+    title: 'Sanoma FMCG B2B landing page',
+    alt: 'sanomafmcg-landing-page',
+    description: 'A B2B landing page for Sanoma FMCG',
+    role: [
+      'Wireframe',
+      'Design',
+      'Frontend'
+    ],
+    thumb_img: require('../assets/images/project-4/thumb-img.png'),
+    main_img: require('../assets/images/project-4/main-img.png'),
+    screen: require('../assets/images/project-4/screen.png')
+  },
+  {
+    title: 'Het testpanel B2B landing page',
+    alt: 'htp-landing-page',
+    description: 'A B2B landing page for Het testpanel',
+    role: [
+      'Design',
+      'Frontend'
+    ],
+    thumb_img: require('../assets/images/project-5/thumb-img.png'),
+    main_img: require('../assets/images/project-5/main-img.png'),
+    screen: require('../assets/images/project-5/screen.png')
+  },
+  {
+    title: 'Optimel static page',
+    alt: 'optimel-static-page',
     description: 'Optimel is one of internal clients of Scoupy. I designed and built the static landing page for Optimel\'s product. This page was used to submit a receipt to claim the cashback amount that were paid by consumers.',
     role: [
       'Web design',
@@ -51,8 +76,8 @@ export default [
     main_img: require('../assets/images/static/main-img-1.png')
   },
   {
-    title: 'Apetina landing page',
-    alt: 'apetina-landing-page',
+    title: 'Apetina static page',
+    alt: 'apetina-static-page',
     description: 'Apetina is one of internal clients of Scoupy. I designed and built the static landing page for Optimel\'s product. This page was used to submit a receipt to claim the cashback amount that were paid by consumers.',
     role: [
       'Web design',
