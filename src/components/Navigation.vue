@@ -21,7 +21,7 @@
                         <router-link class="nav-link scroll" to="/" href="#portfolioBlocks" >Portfolio</router-link>
                     </li>
                     <li class="nav-item">
-                        <a href="http://valerievarias.com/" target="_blank" class="nav-link">Resume</a>
+                        <a href="https://isaunone.github.io/resume/" target="_blank" class="nav-link">Resume</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#contact" >Contact</a>
