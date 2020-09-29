@@ -2,7 +2,7 @@
     <nav :class="{navwhite : isActive}"
     class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <router-link to="/" class="logo" href="#">V.</router-link>
+            <a :href="$router.resolve({name: 'home'}).href" class="logo" >V.</a>
             <button @click="toggleBackground"
             class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar top-bar"></span>
@@ -15,7 +15,7 @@
                         <a :href="$router.resolve({name: 'home'}).href" class="nav-link" >Home</a>
                     </li>
                     <li class="nav-item">
-                        <a :href="$router.resolve({name: 'about'}).href" class="nav-link">About</a>
+                         <router-link to="/about" class="nav-link">About</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link scroll" to="/" href="#portfolioBlocks" >Portfolio</router-link>
